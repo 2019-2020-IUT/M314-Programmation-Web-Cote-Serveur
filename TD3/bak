@@ -1,0 +1,32 @@
+/*
+	if (! (isset($value["prenom"]) || isset($value["nom"])) ) {
+		echo '<form action="./exo12.php" method="get" name="formulaire">
+		Nom : <input type="text" name="formulaire[nom]"><br />
+		Prenom : <input type="text" name="formulaire[prenom]"><br />
+		Email : <input type="email" name="formulaire[email]"><br />
+		Sexe : 	<input type="radio" name="formulaire[sexe]" value="Homme" />Homme
+				<input type="radio" name="formulaire[sexe]" value="Femme" />Femme
+				<input type="radio" name="formulaire[sexe]" value="Autre" />Autre(s)<br />
+		Vin(s) Choisi(s) : 
+			<input type="checkbox" name ="formulaire[vins][st_emilion]" value="St_Emilion" />St Emilion
+			<input type="checkbox" name ="formulaire[vins][chateau_hermitage]" value="Chateau_Hermitage" />Château l’Hermitage
+			<input type="checkbox" name ="formulaire[vins][entre_les_deux_mers]" value="Entre_les_Deux_Mers" />Entre les Deux Mers
+			<input type="checkbox" name ="formulaire[vins][fitou]" value="Fitou" />Fitou
+			<input type="checkbox" name ="formulaire[vins][bandol]" value="Bandol" />Bandol
+			<input type="checkbox" name ="formulaire[vins][cote_de_provence]" value="Cote_de_Provence" />Côte de Provence<br />
+		<input type="submit" name ="formulaire[send]" value="Envoyer" />
+	</form>';
+	} else {
+
+		
+		echo "<h1>Valeurs renvoy&eacute;es par ".$value["PHP_SELF"]."</h1>";
+		echo "Pr&eacute;nom : ".$value["prenom"]."<br/>";
+		echo "Nom : ".$value["nom"]."<br/>";
+		echo "Civilit&eacute; : ".$value["civilite"]."<br/>";
+		echo "Email: ".$value["email"]."<br/>";
+		echo "Vin(s) sélectioné(s): ";
+		foreach($value["vin"] as $vaueur) {
+			echo $t_vin[$valeur]."&nbsp;";
+		}
+	}
+	*/
