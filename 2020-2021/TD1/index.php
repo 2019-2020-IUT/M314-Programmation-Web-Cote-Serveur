@@ -27,8 +27,6 @@ $voitures = array(
     "VW"         => array("Up", "Polo", "Golf", "Passat")
 );
 
-echo "voici l'ensemble des variables de ce fichier :";
-
 ?>
 
 <html>
