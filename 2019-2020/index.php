@@ -42,7 +42,7 @@ $dir = basename(($dirT));
                         $dh = opendir($path);
                         $i=1;
                         while (($file = readdir($dh)) !== false) {
-                            if($file != "." && $file != ".." && $file != "index.php" && $file != ".htaccess" && $file != "error_log" && $file != "src" && $file != ".git" && $file != "LICENSE.md" && $file != "README.md" && $file != "cgi-bin") {
+                            if($file != "." && $file != ".." && $file != "index.php" && $file != ".htaccess" && $file != "error_log" && $file != "src" && $file != "cgi-bin") {
                                 if (filetype($file) == "dir")
                                 {
                                     echo "<a href='$path/$file' class='ls-s'><img src='./src/folder.png' alt='folder' class='icon' />$file</a><br />";
