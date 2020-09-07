@@ -27,6 +27,8 @@ $voitures = array(
     "VW"         => array("Up", "Polo", "Golf", "Passat")
 );
 
+echo "voici l'ensemble des variables de ce fichier :";
+
 ?>
 
 <html>
@@ -70,9 +72,9 @@ $voitures = array(
     print ('addslashes() ajoute des antislashs dans une chaîne : ') . addslashes($aj2) . '<br />';
     print ('addcslashes() ajoute des slashs dans toute la chaîne selon les caractère de la chaine passé en 2nd paramètre : ') . addcslashes($aj, "epakj") . '<br />';
     ?>
-    
+
     <br />
-    
+
     <?php
     function DisplayVoitures($voitures) {
         $i = 0;
@@ -97,6 +99,31 @@ $voitures = array(
 
     echo DisplayVoitures($voitures);
     ?>
+
+    <a href="..">
+        <button class="button blue">Retour à la page précédente</button>
+    </a>
 </body>
+
+<style>
+    .button {
+        border: none;
+        color: white;
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        cursor: pointer;
+    }
+
+    .blue {
+        background-color: #4c6e8a;
+    }
+
+    /* Green */
+</style>
+
 
 </html>
