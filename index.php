@@ -16,7 +16,7 @@ $dir = basename(($dirT));
     <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
         <div class="container">
             <div class="navbar-header page-scroll">
-            <a class="navbar-brand page-scroll" href="..">Localhost</a>
+            <a class="navbar-brand page-scroll" href="">Pauline's M314 Web Folder</a>
             </div>
 
             <div class="collapse navbar-collapse navbar-ex1-collapse">
@@ -42,7 +42,7 @@ $dir = basename(($dirT));
                         $dh = opendir($path);
                         $i=1;
                         while (($file = readdir($dh)) !== false) {
-                            if($file != "." && $file != ".." && $file != "index.php" && $file != ".htaccess" && $file != "error_log" && $file != "src" && $file != ".git" && $file != "LICENSE.md" && $file != "README.md" && $file != "cgi-bin") {
+                            if($file != "." && $file != ".." && $file != "index.php" && $file != ".htaccess" && $file != "error_log" && $file != "src" && $file != ".git" && $file != "LICENSE.md" && $file != "README.md" && $file != "cgi-bin" && $file != ".gitignore") {
                                 if (filetype($file) == "dir")
                                 {
                                     echo "<a href='$path/$file' class='ls-s'><img src='./src/folder.png' alt='folder' class='icon' />$file</a><br />";
