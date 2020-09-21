@@ -11,7 +11,8 @@
 $aj = "Applejack is best pony !";
 $cmc = "Applebloom is Applejack's little sister, Scootaloo is Rainbow Dash's little filly; Sweatie Belle is Rarity's little sister.";
 $song = "We've traveled the road of generations… Joined by a common bond; We sing our song 'cross the pony nation; From Equestria and beyond… We're Apples forever, Apples together ! We're family, but so much more ! No matter what comes, we will face the weather ! We're Apples to the core…";
-
+$alpha = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+$num = "0123456789";
 $namesO = array (
     "mots",
     "phrases",
@@ -83,6 +84,12 @@ function keepOccurences(String $s) : array {
     $tabCount[0] = nbWord($s);
     $tabCount[1] = nbSentence($s);
     return $tabCount;
+}
+
+function generatePassword(String $s) : String {
+
+    
+    return "";
 }
 
 ?>
