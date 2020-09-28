@@ -11,8 +11,6 @@
 $aj = "Applejack is best pony !";
 $cmc = "Applebloom is Applejack's little sister, Scootaloo is Rainbow Dash's little filly; Sweatie Belle is Rarity's little sister.";
 $song = "We've traveled the road of generations… Joined by a common bond; We sing our song 'cross the pony nation; From Equestria and beyond… We're Apples forever, Apples together ! We're family, but so much more ! No matter what comes, we will face the weather ! We're Apples to the core…";
-$alpha = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
-$num = "0123456789";
 $namesO = array (
     "mots",
     "phrases",
@@ -86,10 +84,23 @@ function keepOccurences(String $s) : array {
     return $tabCount;
 }
 
-function generatePassword(String $s) : String {
-
-    
-    return "";
+function generatePsw(String $s) : String {
+    $psw = "";
+    if(mb_strlen($s) >= 6) {
+        $i = 0;
+        while($i < 4) {
+            $alea = random_int(0,9);
+            $psw .=$alea;
+            $i++;
+        }
+        $i = 0;
+        while($i < 4) {
+            $alea = $s[random_int(0,mb_strlen($s))];
+            $psw .=$alea;
+            $i++;
+        }
+    }
+    return $psw;
 }
 
 ?>
@@ -100,6 +111,7 @@ function generatePassword(String $s) : String {
     <title>M314 - TD1</title>
     <link rel="icon" type="image/png" href="https://www.junkjumper-projects.com/umming_lines_paint.png" />
     <h1>M314 - TD2 : Manipulation des boucles, expressions conditionnelles et introduction aux tables globales</h1>
+    <meta charset="UTF-8" />
 </head>
 
 <body>
@@ -142,8 +154,26 @@ function generatePassword(String $s) : String {
     for ($i=0; $i < 8 ; $i++) { 
         echo $tab[$i] . " " . $namesO[$i] . ", ";
     }
-    ?>
+    ?></p>
 
+    <p>
+    5) Mot de passe aléatoire de "Applejack" : <?php print_r(generatePsw("Applejack")); ?>
+    </p>
+
+    <h2>Tables $GLOBALS, $_SERVER et $_ENV</h1>
+    <p>
+        Voici la valeur de SERVER_ADDR : <?php print_r($_SERVER["SERVER_ADDR"]) ?> <br/>
+        Voici la valeur de HTTP_HOST : <?php print_r($_SERVER["HTTP_HOST"]) ?> <br/>
+        Voici la valeur de REMOTE_ADDR : <?php print_r($_SERVER["REMOTE_ADDR"]) ?> <br/>
+        Voici la valeur de HTTP_USER_AGENT : <?php print_r($_SERVER["HTTP_USER_AGENT"]) ?> <br/><br />
+        Voici la valeur de $_ENV : <?php print_r($_ENV)?>
+    </p>
+
+    <h2>Les fonctions date et mktime</h2>
+
+    <p>Bonjour, nous sommes le <?php echo date("d/m/o") ?>, il est <?php echo date("H:i:s")?>.<br />
+    Le jour que nous sommes est le <?php echo date("l")?>.
+    Ma date de naissance : <?php echo date("d/m/o", mktime(7, 25, 0, 6, 7, 2000));?> à <?php echo date("H:i:s", mktime(7, 25, 0, 6, 7, 2000))?> GMT-4.
     </p>
 
     <a href="..">
