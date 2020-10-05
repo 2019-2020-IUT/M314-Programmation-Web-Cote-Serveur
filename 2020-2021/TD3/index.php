@@ -32,13 +32,14 @@
                 <input type="radio" name="formulaire[genre]" value="Poly-genre" />Poly-genre
                 <input type="radio" name="formulaire[genre]" value="Genderfluid" />Genderfluid
                 <br />
-		Vin(s) Choisi(s) : 
-			<input type="checkbox" name ="formulaire[vins][st_emilion]" value="St_Emilion" />St Emilion
-			<input type="checkbox" name ="formulaire[vins][chateau_hermitage]" value="Chateau_Hermitage" />Château l’Hermitage
-			<input type="checkbox" name ="formulaire[vins][entre_les_deux_mers]" value="Entre_les_Deux_Mers" />Entre les Deux Mers
-			<input type="checkbox" name ="formulaire[vins][fitou]" value="Fitou" />Fitou
-			<input type="checkbox" name ="formulaire[vins][bandol]" value="Bandol" />Bandol
-			<input type="checkbox" name ="formulaire[vins][cote_de_provence]" value="Cote_de_Provence" />Côte de Provence<br />
+        Vin(s) Choisi(s) : <br />
+			<input type="checkbox" name ="formulaire[vins][st_emilion]" value="St_Emilion" />St Emilion <br />
+			<input type="checkbox" name ="formulaire[vins][chateau_hermitage]" value="Chateau_Hermitage" />Château l’Hermitage <br />
+			<input type="checkbox" name ="formulaire[vins][entre_les_deux_mers]" value="Entre_les_Deux_Mers" />Entre les Deux Mers <br />
+			<input type="checkbox" name ="formulaire[vins][fitou]" value="Fitou" />Fitou <br />
+			<input type="checkbox" name ="formulaire[vins][bandol]" value="Bandol" />Bandol <br />
+            <input type="checkbox" name ="formulaire[vins][Cote_de_provence]" value="Cote_de_Provence" />Côte de Provence <br />
+            <input type="checkbox" name ="formulaire[vins][Apple Cider]" value="Apple Cider" />Apple Cider <br />
 		<input type="submit" value="Envoyer" />
 	</form>
 

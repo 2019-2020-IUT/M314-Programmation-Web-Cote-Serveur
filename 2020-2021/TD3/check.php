@@ -32,8 +32,6 @@ $tVins = $tab['vins'];
 $vins = "";
 $denom = "Damoixe";
 
-print_r($tVins);
-
 if ($tab['genre'] == "Homme") {
     $denom = "Monsieur";
 } else if ($tab['genre'] == "Femme") {
