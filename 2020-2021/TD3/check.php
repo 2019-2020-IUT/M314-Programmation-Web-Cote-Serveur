@@ -28,8 +28,11 @@
 $checkN = false;
 $checkE = false;
 $tab = $_REQUEST['formulaire'];
+$tVins = $tab['vins'];
 $vins = "";
 $denom = "Damoixe";
+
+print_r($tVins);
 
 if ($tab['genre'] == "Homme") {
     $denom = "Monsieur";
@@ -47,7 +50,7 @@ if (preg_match("#@#", $tab['email']) && preg_match("#.#", $tab['email']) && preg
 
 if ($checkN) {
     foreach ($tab['vins'] as $key => $valeur) {
-        $vins = $valeur . '&nbsp,&nbsp';
+        $vins = $vins. $valeur . ', ';
     }
 
     echo '<p>Votre nom est : ' . $tab['nom'] . '</p>';
@@ -56,7 +59,8 @@ if ($checkN) {
         echo '<p>Votre genre est : ' . $tab['genre'] . '</p>';
     }
     if ($vins != null) {
-        echo '<p>Votre sélection de vin(s) est : ' . $vins . '</p>';
+        $v = substr($vins, 0, strlen($vins) - 2);
+        echo '<p>Votre sélection de vin(s) est : ' . $v . '</p>';
     }
 } else {
     echo '<p>Votre nom ou prénom n\'est pas correct.</p>';
@@ -70,7 +74,7 @@ if ($checkE) {
 
 if ($checkE && $checkN) {
     echo '<p id="rep">Bonjour ' . $denom . ' ' . $tab['nom'] . ' ' . $tab['prenom'] . ',<br /> 
-        Nous vous remercions d’avoir commandé ' . $vins . '<br />'
+        Nous vous remercions d’avoir commandé ' . $v . '<br />'
         . 'Un mail de conformation vous a été envoyé à l’adresse : ' . $tab['email'] . '</p>';
 }
 
