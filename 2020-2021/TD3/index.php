@@ -7,6 +7,9 @@
  * @Create Time: 05-10-2020 10:26
  * @Description: M314 - TD3
  */
+
+file_put_contents('./voiture.txt', "");
+
 ?>
 
 <html>
@@ -43,6 +46,9 @@
 		<input type="submit" value="Envoyer" />
 	</form>
 
+    <a href="./voitures.php">
+        <button class="button blue">Exo Voitures</button>
+    </a>
     <a href="..">
         <button class="button blue">Retour à la page précédente</button>
     </a>
