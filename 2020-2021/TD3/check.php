@@ -74,6 +74,8 @@ if ($checkE && $checkN) {
     echo '<p id="rep">Bonjour ' . $denom . ' ' . $tab['nom'] . ' ' . $tab['prenom'] . ',<br /> 
         Nous vous remercions d’avoir commandé ' . $v . '<br />'
         . 'Un mail de conformation vous a été envoyé à l’adresse : ' . $tab['email'] . '</p>';
+} else {
+    echo "NIKTONKU";
 }
 
 

@@ -108,7 +108,7 @@ function generatePsw(String $s) : String {
 <html>
 
 <head>
-    <title>M314 - TD1</title>
+    <title>M314 - TD2</title>
     <link rel="icon" type="image/png" href="https://www.junkjumper-projects.com/umming_lines_paint.png" />
     <h1>M314 - TD2 : Manipulation des boucles, expressions conditionnelles et introduction aux tables globales</h1>
     <meta charset="UTF-8" />
